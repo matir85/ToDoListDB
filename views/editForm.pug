@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h2 Dodaj nowe zadanie
+    br
+    form(method="POST" action=`/${task.id}?_method=PUT` class='formEdit')
+        p
+            textarea( name='editTask')= task.title
+        p
+            button(type='submmit' class='btnSave') Zapisz

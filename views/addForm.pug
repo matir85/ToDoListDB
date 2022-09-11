@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h2 Dodaj nowe zadanie
+    br
+    form(method="POST" action='/' class='formAdd')
+        p
+            textarea(placeholder='Zadanie do wykonania' name='task')
+        p
+            button(type='submmit' class='btnSave') Zapisz
+

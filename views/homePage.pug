@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  a(href='/add' class='btnAddTask')= 'Dodaj zadanie'
+  p Pozostało do wykonania
+  ul(class='list')
+    each val in list
+      div(class='listItem')
+        li= val.title
+        form(method="POST" action=`/${val.id}?_method=DELETE` class='formDelete')
+          a(href=`/edit/${val.id}` class="fa-regular fa-pen-to-square edit")
+          button(type='submit' class="fa-regular fa-trash-can trash")
+
